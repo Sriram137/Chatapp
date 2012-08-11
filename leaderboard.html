@@ -1,0 +1,32 @@
+<head>
+  <title>Leaderboard</title>
+</head>
+
+<body>
+  <div id="container">
+    {{> chatspace}}
+  </div>
+</body>
+
+<template name="chatspace">
+<div class="span6 well">
+  <div class="chatspace">
+    {{#each messages}}
+      {{> message}}
+    {{/each}}
+  </div>
+</div>
+<div class="span5">
+  <div class="typingspace">
+    <form class="form-search">
+      <input type="text" class="input" id="chat_message" />
+      <button class="inc btn" id="chat_button">Chat</button>
+    </form>
+  </div>
+</div>
+
+</template>
+
+<template name="message">
+    <div>{{chat}}</div>
+</template>
